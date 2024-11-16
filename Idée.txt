@@ -1,0 +1,13 @@
+simuler des dinausors avec 1 thread par dinosaure, définir une zone
+
+class dino : espèce, âge, fréquence cardiaque, température, mouvement, fonction de simulation de valeurs chaque jours
+classe espèce : nom, effectif, visiteurs engrangés, prix, cout de production
+
+faire une île de dinosaures vivants (park) , une ile de dinos vieux et malades, une ile de dinos en centre de formation mdr avant d'aller dans le parc, et un cimetière
+classe zone : nom, effectif, transactions
+
+classe transactions = budget, dépenses, revenus
+
+implémenter des logiques de services : gestion de budget = billet 30€, cout véto par jour 50€ par dino, cout nourriture 10€ par dino par jour, si plus de budget, vendre des dinos
+service santé = fonctions pour définir l'état de santé du dino en fonction de ses variables, si malade changer d'îles
+

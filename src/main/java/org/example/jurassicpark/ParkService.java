@@ -16,14 +16,10 @@ public class ParkService{
         park.islas[3]= Infirmerie;
         Database.initDatabase(Database.getConnection(Main.URL));
         //on commence avec 3 dinosaures, 1 par île sauf l'infirmerie, le budget initial est de 10000€
-
-        Dino Dino1 = CreateDino(0, park);
-        Dino Dino2 = CreateDino(1, park);
-        Dino Dino3 = CreateDino(2, park);
         park.combiendino=3;
         park.revenus=0;
         park.depenses=0;
-        park.budget=10000;
+        park.budget=0;
         park.diaAno=0;
         for (int i = 0; i<50; i++){
             park.idlibres[i]=true;
@@ -32,18 +28,17 @@ public class ParkService{
     }
     static void UpdatePark(Park park){
         park.diaAno++;
-        DinoService.UpdateAllDino(park);
-        DinoService.oeuf(park);
         park.combiendino = IslaNublar.CombienDino + IslaSorna.CombienDino + IslAquatica.CombienDino + Infirmerie.CombienDino;
-        park.revenus = IslaNublar.argent + IslaSorna.argent + IslAquatica.argent;
-        //un carnivore coûte 200€ de nourriture, un herbivore 90€ et un aquatique 135€, les frais vétérinaires sur dino sont de 1000€.
-        park.depenses = IslaNublar.CombienDino*200 + IslaSorna.CombienDino*90 + IslAquatica.CombienDino*135 + Infirmerie.CombienDino*1000;
-        park.budget = park.revenus - park.depenses;
+        park.revenus += IslaNublar.argent + IslaSorna.argent + IslAquatica.argent;
+        //un carnivore coûte 600€ de nourriture, un herbivore 290€ et un aquatique 435€, les frais vétérinaires sur dino sont de 1500€.
+        park.depenses += IslaNublar.CombienDino*600 + IslaSorna.CombienDino*290 + IslAquatica.CombienDino*435 + Infirmerie.CombienDino*1500;
+        park.budget = (park.revenus - park.depenses);
         if (park.diaAno == 365) {
             System.out.println("Bilan del año :\n");
             System.out.println("Numero de dinosaurios : " + park.combiendino + "\n");
             System.out.println("Numero de dinosaurios por isla : Isla Nublar = " + IslaNublar.CombienDino + " - Isla Sorna = " + IslaSorna.CombienDino + " - IslAquatica = " + IslAquatica.CombienDino+ "\n");
             System.out.println("Presupuesto = " + park.budget + " con ingresos de " + park.revenus + " y gastos de " + park.depenses+ "\n");
+            park.diaAno = 0;
         }
     }
 

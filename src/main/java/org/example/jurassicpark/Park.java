@@ -9,4 +9,5 @@ public class Park{
     // les médicaments à l'infirmerie coûtent 500€ par dino
     int depenses;
     int budget;
+    int diaAno;
 }

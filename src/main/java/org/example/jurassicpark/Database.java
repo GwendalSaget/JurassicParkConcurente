@@ -1,9 +1,6 @@
 package org.example.jurassicpark;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class Database {
 
@@ -13,7 +10,20 @@ public class Database {
     public static void initDatabase(Connection conn) throws SQLException {
         try (Statement stmt = conn.createStatement()) {
             stmt.execute("CREATE TABLE IF NOT EXISTS dino (id INT, isla INT, espece INT, age INT, argent INT, temperature INT, salud INT)");
-            //stmt.execute("CREATE TABLE IF NOT EXISTS evento (id BIGINT AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(255), profesor VARCHAR(255), lugar VARCHAR(255), fecha VARCHAR(255))");
+        }
+    }
+    public static void clearTable() {
+        String sqlDelete = "DELETE FROM dino";
+
+        try (Connection conn = Database.getConnection(Main.URL);
+             PreparedStatement stmt = conn.prepareStatement(sqlDelete)) {
+
+            int rowsAffected = stmt.executeUpdate();
+            System.out.println("Todo borrado : " + rowsAffected);
+
+        } catch (SQLException e) {
+            System.err.println("Error al borrar la tabla : " + e.getMessage());
+            e.printStackTrace();
         }
     }
 

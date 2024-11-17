@@ -16,6 +16,7 @@ public class ParkService{
         park.islas[3]= Infirmerie;
         Database.initDatabase(Database.getConnection(Main.URL));
         //on commence avec 3 dinosaures, 1 par île sauf l'infirmerie, le budget initial est de 10000€
+
         Dino Dino1 = CreateDino(0, park);
         Dino Dino2 = CreateDino(1, park);
         Dino Dino3 = CreateDino(2, park);
@@ -30,6 +31,7 @@ public class ParkService{
         return park;
     }
     static void UpdatePark(Park park){
+        park.diaAno++;
         DinoService.UpdateAllDino(park);
         DinoService.oeuf(park);
         park.combiendino = IslaNublar.CombienDino + IslaSorna.CombienDino + IslAquatica.CombienDino + Infirmerie.CombienDino;

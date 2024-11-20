@@ -28,7 +28,7 @@ public class ParkService{
     }
     static void UpdatePark(Park park){
         park.diaAno++;
-        park.combiendino = IslaNublar.CombienDino + IslaSorna.CombienDino + IslAquatica.CombienDino + Infirmerie.CombienDino;
+        park.combiendino = IslaNublar.CombienDino + IslaSorna.CombienDino + IslAquatica.CombienDino;
         park.revenus += IslaNublar.argent + IslaSorna.argent + IslAquatica.argent;
         //un carnivore coûte 600€ de nourriture, un herbivore 290€ et un aquatique 435€, les frais vétérinaires sur dino sont de 1500€.
         park.depenses += IslaNublar.CombienDino*600 + IslaSorna.CombienDino*290 + IslAquatica.CombienDino*435 + Infirmerie.CombienDino*1500;

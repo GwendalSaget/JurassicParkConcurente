@@ -1,8 +1,7 @@
 package org.example.jurassicpark;
 
-import java.sql.Connection;
+
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.Scanner;
 
 import static org.example.jurassicpark.DinoService.*;
@@ -62,7 +61,7 @@ public class Main {
 
             // Simulation des années
             while (true) {
-                for (jour = 0; jour < 366; jour++) {
+                for (jour = 1; jour < 366; jour++) {
                     // Mise à jour des dinosaures et de l'environnement
                     DinoService.UpdateAllDino(park);
                     DinoService.oeuf(park);

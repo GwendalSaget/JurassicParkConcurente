@@ -72,7 +72,7 @@ public class DinoService {
                 else{
                     ES2 = "Indominus-Rex";
                 }
-                System.out.println("El dinosaurio de ID : " + dino.id + " y de tipo : " + ES2 +"ha sido enfermo el dia" + park.diaAno);
+                System.out.println("El dinosaurio de ID : " + dino.id + " y de tipo : " + ES2 +"ha sido enfermo el dia " + park.diaAno);
             }
         }
         //en détenteeeee
@@ -141,7 +141,7 @@ public class DinoService {
                     else{
                         ES3 = "Indominus-Rex";
                     }
-                    System.out.println("Felicidades, un dinosaurio de tipo : " + ES3 + "nacio en el dia " + park.diaAno);
+                    System.out.println("Felicidades, un dinosaurio de tipo : " + ES3 + " nacio en el dia " + park.diaAno);
                     Dino huevo = CreateDino(i, park);
                 }
             }

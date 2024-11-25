@@ -34,9 +34,9 @@ public class ParkService{
         park.depenses += IslaNublar.CombienDino*600 + IslaSorna.CombienDino*290 + IslAquatica.CombienDino*435 + Infirmerie.CombienDino*1500;
         park.budget = (park.revenus - park.depenses);
         if (park.diaAno == 365) {
-            System.out.println("Bilan del año :\n");
-            System.out.println("Numero de dinosaurios : " + park.combiendino + "\n");
-            System.out.println("Numero de dinosaurios por isla : Isla Nublar = " + IslaNublar.CombienDino + " - Isla Sorna = " + IslaSorna.CombienDino + " - IslAquatica = " + IslAquatica.CombienDino+ "\n");
+            System.out.println("Balance del año :\n");
+            System.out.println("Número de dinosaurios : " + park.combiendino + "\n");
+            System.out.println("Número de dinosaurios por isla : Isla Nublar = " + IslaNublar.CombienDino + " - Isla Sorna = " + IslaSorna.CombienDino + " - IslAquatica = " + IslAquatica.CombienDino+ "\n");
             System.out.println("Presupuesto = " + park.budget + " con ingresos de " + park.revenus + " y gastos de " + park.depenses+ "\n");
             park.diaAno = 0;
         }

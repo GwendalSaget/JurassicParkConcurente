@@ -49,8 +49,8 @@ public class Main {
 
         if (inicio.equals("J")) {
             int ano = 1;
-            System.out.println("Perfecto ! Que placer conocerte !!! Vas a empezar con 3 dinosaurios, un carnivorio, un herbivoro y un monstro aquatico.");
-            System.out.println("Despues de cada año que va a estar simulado, tendre la oportunidad de observar como evolua Jurassic Park !\n Pero podras tambien ver cada evento importante del año !");
+            System.out.println("Perfecto ! Que placer conocerte !!! Vas a empezar con 3 dinosaurios, un carnivoro, un herbivoro y un monstruo aquatico.");
+            System.out.println("Despues de cada año que va a estar simulado, tendre la oportunidad de observar como evoluciona Jurassic Park !\n Pero podras tambien ver cada evento importante del año !");
             System.out.println("...\n...\n...\n...\n...\n...\n...\nLet'sssssss goooooo !!! Año 1 :\n");
 
             Park park = new ParkService().InitPark();

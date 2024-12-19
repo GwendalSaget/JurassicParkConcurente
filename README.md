@@ -4,6 +4,8 @@ Base de Datos SQLite: Utiliza una base de datos SQLite para almacenar y gestiona
 
 Simulación Anual: La simulación avanza año a año, y cada año se simula el ciclo de vida y evolución de los dinosaurios en el parque. Cada año se realiza una serie de actualizaciones y verificaciones del estado de los dinosaurios (salud, edad, temperatura, etc.).
 
+El proyecto cuenta también de un front-end; con un html, js y un css.
+
 Antes de empezar, hay que cambiar el camino de la base de datos, muchas gracias
 
 enlace GitHub : https://github.com/GwendalSaget/JurassicParkConcurente

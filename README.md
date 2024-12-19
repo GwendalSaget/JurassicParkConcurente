@@ -10,5 +10,5 @@ Antes de empezar, hay que cambiar el camino de la base de datos, muchas gracias
 
 enlace GitHub : https://github.com/GwendalSaget/JurassicParkConcurente
 
-Gwendal Saget y Mamoun Benboudja
+Gwendal Saget y Mamoun Benboujida
 

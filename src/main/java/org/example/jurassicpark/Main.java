@@ -7,8 +7,8 @@ import java.util.Scanner;
 import static org.example.jurassicpark.DinoService.*;
 
 public class Main {
-    static final String URL = "jdbc:sqlite:C:/Users/gwend/OneDrive/Documents/UAX/Concurrente/JurassicPark/src/main/java/org/example/jurassicpark/databasedino.db";
 
+    static final String URL = "jdbc:sqlite:databasedino.db";
     public static String eleccion(int ano, Scanner scanner) {
         String ok = "";
         while (!ok.equals("Q") && !ok.equals("A")) {
@@ -26,7 +26,7 @@ public class Main {
 
 
     public static void main(String[] args) throws SQLException {
-        Database.clearTable();
+        //Database.clearTable();
         System.out.println("Bienvenido a Jurassic Park !!! (Imaginale la musica de la pelicula)");
         System.out.println("  *                               *     _\n" +
                 "       /\\     *            ___.       /  `)\n" +
@@ -42,7 +42,7 @@ public class Main {
                 "\n" +
                 "~~~     ~~   ` ~   ..   ~  ~    .     ~` `   '.\n" +
                 "~ _  -  -~.    .'   .`  ~ .,    '.    ~~ .  '.");
-        System.out.println("Debo assumir, este pequeño dibujo es copiado pegado\n Para empezar, haz un clic en <<J>>");
+        System.out.println("Para empezar, haz un clic en <<J>>");
 
         Scanner scanner = new Scanner(System.in);
         String inicio = scanner.nextLine().toUpperCase();

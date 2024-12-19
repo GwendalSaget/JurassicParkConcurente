@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background: url('backgroundJP.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+
+h1 {
+    font-size: 3rem;
+    color: #860509;
+    margin: 20px 0;
+}
+
+
+p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+
+.swipe-up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    color: #ccab05;
+    font-size: 1.2rem;
+    font-weight: bold;
+    animation: bounce 1.5s infinite;
+}
+
+.swipe-up .arrow {
+    font-size: 2rem;
+    margin-top: 10px;
+    color: white;
+    animation: bounce 1.5s infinite;
+}
+
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+
+.islands {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.island {
+    position: relative;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.island img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.island h2 {
+    color: #FFD700;
+    margin: 10px 0;
+}
+
+
+.island .info {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+
+.island:hover {
+    height: 400px;
+}
+
+.island:hover .info {
+    opacity: 1;
+    height: auto;
+}
+
+
+.island .info p {
+    margin: 5px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #ccc;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
